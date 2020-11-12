@@ -1,0 +1,261 @@
+.top-bar, #search-box, .nav-list li, .nav-list a {
+	background-color: #002D45;
+	font-family: Proxima Nova,helvetica neue,helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 110%;
+	color: #FFFFFF;
+}
+
+.top-bar {
+	color: #FFFFFF;
+	height: 40px;
+	margin: 0px;
+	padding: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+		display: inline;
+}
+
+.nav-list li {
+	    float: left;
+}
+
+.nav-list a {
+    display: inline;
+    padding: 8px;
+		text-decoration: none;
+}
+
+/* change the color of the menu item corresponding to the page user is on, per user Epic 1, story 2 */
+#selected {
+  color: red;
+}
+
+/* formatting for help content page */
+.format-ul {
+  margin: 5px;
+}
+
+/* formatting for help list steps */
+.format-list {
+  font-size: 1.5em;
+  color: black;
+}
+
+.format-list:hover {
+  cursor: pointer;
+}
+
+.outline {
+  outline-color: black;
+  outline-style: solid;
+  outline-width: 2px;
+  width: 90%;
+}
+
+.format-content {
+  width: 90%;
+  overflow: hidden;
+  margin: 20px;
+  font-size: 1.25em;
+}
+
+/* formatting for content emphasized with italics */
+#italics {
+  font-style: italic;
+}
+/* End formatting for help content page */
+
+
+/* Formatting for Part Detail page */
+.catalog-detail img {
+  padding: 10px;
+  height: 500px;
+  width: 25%;
+  float: left;
+  margin-right: 25px;
+}
+
+.format-detail-overview {
+  overflow: hidden;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.format-btn {
+  width: 150px;
+  height: 50px;
+  font-size: 1.5em;
+}
+
+.format-detail {
+  font-size: 1em;
+  overflow: hidden;
+}
+/*  End formatting for Part Detail page */
+
+/* Formatting for index */
+.format-text {
+  text-align: center;
+  color: black;
+}
+
+/* End formatting for index */
+
+/* Formatting for links */
+.search-link-visible {
+  text-align: center;
+  color: black;
+}
+/* End formatting for index */
+
+/* Keeps this in sync w/ the login-content div */
+#login-form {
+  display: none;
+}
+
+ #login-content input {
+  margin-bottom: 3px;
+  padding: 10px;
+  width: 90%;
+  border: 1px solid #CCC;
+}
+
+ #login-content label {
+  cursor: pointer;
+  font-family: Proxima Nova,helvetica neue,helvetica,sans-serif;
+	color: #002D45;
+}
+
+ #login-content #register-form {
+  display: none;
+}
+
+ #login-content #forgotten-form {
+  display: none;
+}
+
+ #login-content, #after-reset, #if-error, #if-reg-error {
+  display: none;
+}
+
+ #login-content .auth-link {
+  cursor: pointer;
+  font-family: Proxima Nova,helvetica neue,helvetica, sans-serif;
+	color: #002D45;
+}
+
+#forgotten-link, #reset-response, #after-reset, #login-link-modal, #if-error, #if-reg-error {
+  cursor: pointer;
+  font-family: Proxima Nova,helvetica neue,helvetica,sans-serif;
+	color: #002D45;
+	font-size: 80%;
+}
+
+#login-link-modal {
+	font-size: 120%;
+}
+
+#login-content {
+  display: none;
+  position: absolute;
+	margin-right: 10px;
+  top: 60px;
+  right: 0;
+	left: 1000;
+  z-index: 999;
+  background: #ffffff;
+  padding: 15px;
+	border: 1px solid #CCC;
+  width: 200px;
+}
+
+.login-message {
+  color: black;
+  overflow: hidden;
+  font-style: italic;
+  text-align: center;
+}
+/* end of styling for log-in functionality */
+
+#search-box {
+	margin-left: auto;
+  margin-right: 0;
+  color: black;
+ }
+
+#search-controls {
+	background-color: #ffffff;
+	padding: 15px 15px;
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+	font-size: 70%;
+    display: flex;
+    align-items: center;
+}
+
+#filter-parts {
+	float: right;
+	margin-left: auto;
+	margin-right: 0;
+	padding-right: 5px;
+ }
+
+.catalog-part {
+  margin: 2px;
+  padding: 0px 5px;
+  float: left;
+  border-style: solid;
+  border-color: #808285;
+  border-width: 1px;
+  width: 150px;
+  height: 200px;
+  line-height: 200px;
+	display: table-cell;
+  position: relative;
+}
+
+.catalog-part img {
+  height: auto;
+	vertical-align: middle;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #f4f4f4;
+	display: inline-table;
+}
+
+.catalog-part:hover .overlay {
+  opacity: 0.75;
+}
+
+p {
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  line-height: 1;
+	overflow: scroll;
+}
+
+.catalog-part p {
+	vertical-align: middle;
+	text-align: center;
+  color: black;
+	display: table-cell;
+	font-size: 80%;
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+
+

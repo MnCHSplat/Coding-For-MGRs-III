@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Coding for MGRs</title>
+</head>
+<body>
+
+<!-- replicate the top of the main(index) page per Epic 1, user story 1 -->
+    <div class="top-bar">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>   <!-- link to main page per Epic 1, user story 3 -->
+          <li><a href="part_details.html">Parts</a></li>  <!-- link to Parts page per Epic 1, user story 3 -->
+          <li><a href="#" id="selected">Search</a></li>   <!-- change color of this option to indicate it's selected per Epic 1, user story 2 -->
+          <li><a href="help.html">Help</a></li> <!-- link to Search page per Epic 1, user story 3 -->
+        </ul>
+        
+        <div id="search-box">
+        <input type="text" name="parts-search" placeholder="Mfg., Model, or Part Number" size=30>
+        </div>
+    </div>
+<!-- end of replication -->
+
+    <div id="search-controls">
+        <div id="result-sort">
+                    Sort By
+                    <select>
+                        <option value="Popularity">Popularity</option>
+                        <option value="Price">Price</option>
+                        <option value="Manufacturer">Manufacturer</option>
+                    </select>
+        </div>
+        <!-- Functionality added, per Epic 4, user story 2, to add a "GO" button to facilitate a search by filter -->
+        <!--    this was done by adding code here and in the script file, including identifying the mfr, model, and type of each part -->
+        <div id="filter-parts">
+                Search By
+                <select id="dd-mfr">
+                    <option value="All">Manufacturer</option>
+                    <option value="Acme">Acme</option>
+                    <option value="Bacme">Bacme</option>
+                    <option value="Cacme">Cacme</option>
+                    <option value="Dacme">Dacme</option>
+                </select>
+                <select id="dd-model">
+                    <option value="All">Model</option>
+                    <option value="TooCool">TooCool</option>
+                    <option value="TooHot">TooHot</option>
+                    <option value="JustRight">JustRight</option>
+                    <option value="Coolerator">Coolerator</option>
+                </select>
+                <select id="dd-type">
+                    <option value="All">Type</option>
+                    <option value="Sniggler">Sniggler</option>
+                    <option value="Wiggler">Wiggler</option>
+                    <option value="Jiggler">Jiggler</option>
+                    <option value="Tiggler">Tiggler</option>
+                </select>
+                <button type="button" id="btn-search">GO</button>
+            </div>
+    </div>
+    
+    <div id="parts-content">
+        <!-- content now provided by script - pulling from external source -->
+    </div>
+
+<script src="https://code.jquery.com/jquery-2.1.4.js" integrity="sha256-siFczlgw4jULnUICcdm9gjQPZkw/YPDqhQ9+nAOScE4=" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

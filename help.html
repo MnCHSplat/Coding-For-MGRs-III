@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Help: Coding for MGR</title>
+</head>
+<body>
+
+<!-- replicate the top of the main(index) page per Epic 1, user story 1 -->
+<div class="top-bar">
+    <ul class="nav-list">
+        <li><a href="index.html">Home</a></li> <!-- link to main page per Epic 1, user story 3 -->
+        <li><a href="part_details.html">Parts</a></li>  <!-- link to Parts page per Epic 1, user story 3 -->
+        <li><a href="search.html">Search</a></li>  <!-- link to Search page per Epic 1, user story 3 -->
+        <li><a href="#" id="selected">Help</a></li> <!-- change color of this option to indicate it's selected per Epic 1, user story 2 -->
+    </ul>
+
+    <div id="search-box">
+    <input type="text" name="parts-search" placeholder="Mfg., Model, or Part Number" size=30>
+    </div>
+</div>
+<!-- end of replication -->
+
+<!-- Work Order process, in order, per Epic 2, user story 1 -->
+<h1>Work Order Process</h1>
+<br>
+<ul class="format-ul">
+    <li class="format-list" id="step1">Step 1: Review Work Order Specifications</li>
+    
+<!-- Epic 5, story 1 functionality added for each step: toggle content to hide/display -->
+        <div class="toggle1">
+            <div class="outline">
+                <p class="format-content">Make sure to review the symptoms provided by the customer, provided on the Dispatch Printout, and consider them against the system(s) in question.  Apply critical thought to help identify initial questions you'll want to answer.
+                </p>
+            </div>
+        </div>
+<!-- End of functionality for Epic 5, story 1 for Step 1 of Work Process. This structure added to each step, below -->
+
+    <li class="format-list" id="step2">Step 2: Locate and Navigate to Job site</li>
+        <div class="toggle2">
+            <div class="outline">
+                <p class="format-content">Use Google Maps to find the address and most efficient route to the job site.</p>
+            </div>
+        </div>
+    <li class="format-list" id="step3">Step 3: Assess situation and Determine Next Steps</li>
+        <div class="toggle3">
+            <div class="outline">
+                <p class="format-content">Follow these troubleshooting steps to clarify the issue:</p>
+                <p class="format-content">1. Confirm the symptoms as reported by the customer</p>
+                <p class="format-content">2. Based on this confirmation and your initial questions, test your theories and related system functions</p>
+                <p class="format-content">3. Reset the system and confirm issue is still occurring</p>
+                <p class="format-content">4. Google the issue</p>
+                <p class="format-content">5. Contact another technician for help</p>
+            </div>
+        </div>
+    <li class="format-list" id="step4">Step 4: Make on-the-spot fixes, if possible</li>
+        <div class="toggle4">
+            <div class="outline">
+                <p class="format-content">Use the tools and any parts you have on-hand to make repairs (temporary, if needed).</p>
+            </div>
+        </div>
+
+    <!-- Step 5 is 'selected' and displayed, per Epic 2, user story 2 -->
+    <!-- NOTE: this is no longer the case per Epic 5...Step 5 should behave like all other steps -->
+    <li class="format-list" id="step5">Step 5: Order replacement parts</li>
+        <div class="toggle5">
+            <div class="outline">
+                <p class="format-content">From the Home menu option,</p>
+                <p class="format-content">- Use the search field (upper right-hand corner) OR</p>
+                <p class="format-content">- Use the drop-down search boxes (just below the open-text search field)</p>
+                <p class="format-content">-	Hover over search results to see part details including price and delivery turn-around</p>
+                <p class="format-content">-	Access the Parts page, review information, and click Order Now</p>
+                <p class="format-content" id="italics">Sort your results by Popularity, Price, or Manufacturer by using the “Sort By” selector</p>
+            </div>
+        </div>
+    <li class="format-list" id="step6">Step 6: Order replacement systems</li>
+        <div class="toggle6">
+            <div class="outline">
+                <p class="format-content">Call the Purchasing department at 333-333-3333 to order a replacement system.  Please be sure you have the customer's full name, address, and contact information.  The Purchasing department will provide you pricing and turn-around information that you can review with the customer.</p>
+            </div>
+        </div>
+    <li class="format-list" id="step7">Step 7: Install replacement parts</li>
+        <div class="toggle7">
+            <div class="outline">
+                <p class="format-content">Replace the needed part. Note that some parts will require calibration - see the Part Details Page for the part to understand comprehensive part information.</p>
+                <p class="format-content" id="italics">Be sure to bring the old part with you for proper disposal!</p>
+            </div>
+        </div>
+    <li class="format-list" id="step8">Step 8: Install replacement systems</li>
+    <div class="toggle8">
+        <div class="outline">
+            <p class="format-content">Install the system following this checklist:</p>
+            <p class="format-content">- Disconnect and remove existing system, if applicable</p>
+            <p class="format-content">-	Position and connect the replacement system</p>
+            <p class="format-content">-	Calibrate and test the new system</p>
+            <p class="format-content" id="italics">Be sure to bring the old system with you for proper disposal!</p>
+        </div>
+    </div>
+    <li class="format-list" id="step9">Step 9: Close out Work Order</li>
+    <div class="toggle9">
+            <div class="outline">
+                <p class="format-content">Check off the appropriate checkboxes on this Work Order's Dispatch Printout to indicate what was done to address the issue. Use the Notes section to provide any context and sign/date the form.</p>
+                <p class="format-content" id="italics">Be sure to have the customer sign this document, too.</p>
+            </div>
+        </div>
+</ul>
+
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

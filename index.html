@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Coding for MGRs</title>
+</head>
+<body>
+
+    <div class="top-bar">
+        <ul class="nav-list">
+          <li><a href="#" id="selected">Home</a></li> <!-- change color of this option to indicate it's selected per user story 2 -->
+          <li class="page-visible"><a href="part_details.html">Parts</a></li>  <!-- link to Parts page per Epic 1, user story 3 -->
+          <li class="page-visible"><a href="search.html">Search</a></li>  <!-- link to Search page per Epic 1, user story 3 -->
+          <li><a href="help.html">Help</a></li> <!-- link to Search page per Epic 1, user story 3 -->
+        </ul>
+ 
+      <div id="search-box">
+        <input type="text" name="parts-search" placeholder="Mfg., Model, or Part Number" size=30>
+      </div>
+
+    <!-- Content from week 2 lecture re: log-in functionality, but script will use my personal firebase system -->
+    <!-- This supports Epic 6, stories 1 and 2 -->
+    <div id="auth-control">
+      <img src="https://www.alexandercowan.com/wp-content/uploads/2018/04/login-icon.png" alt="auth" style="width:30px;float: left;">
+      <ul class="nav-list">
+      <li id="login-trigger"><a href="#" id="auth-text">Log In</a></li>
+      </ul>
+      
+      <div id="login-content">
+      <!-- On Forms: -->
+      <!-- onsubmit="return false" will stop the form submission but allow us to pick up the submission in JQuery with $('#login-form').submit(), 		otherwise JSFiddle can break. -->
+  
+        <!-- allows us to easily switch between login and registration //removed for new approach -->
+      <!--	<input type='checkbox' id='form-switch'>  -->
+  
+        <!-- Login -->
+        <form id='login-form' method='post' onsubmit="return false">
+          <input type="text" placeholder="Email" id="login_email" required>
+          <input type="password" placeholder="Password" id="login_pwd" required>
+          <button type='submit'>Log In</button>
+          <a id='forgotten-link'>Forgot Password?</a>
+          <h3><a class='auth-link' id='register-link'>Register</a></h3>
+        </form>
+  
+        <!-- Registration -->
+        <form id='register-form' method='post' onsubmit="return false">
+          <input type="text" placeholder="Email" id="register_email" required>
+          <input type="password" placeholder="Password" id="register_pwd" required>
+          <input type="password" placeholder="Confirm Password" id="register_re_pwd" required>
+          <button type='submit' style = "text-align: right;">Register</button>
+          <div id='if-reg-error'><div id='reg-error-response' style="margin-top: 5px;"></div></div>
+        </form>
+        
+        <!-- Password Recovery -->
+        <form id='forgotten-form' method='post' onsubmit="return false">
+          <div id='before-reset'><input type="text" placeholder="Email" id="recovery_email" required>
+          <button type='submit'>Recover</button></div>
+          <div id='after-reset'><div id='reset-response' style="margin-top: 5px;"><p>Reset instructions are on their way to <span id='submitted-email'>email</span>. If you're still having trouble with login, please get in touch.</p><p><a id='login-link-modal' href='#'>Log In</a><p></div></div>
+          <div id='if-error'><div id='error-response' style="margin-top: 5px;"></div></div>
+        </form>
+    
+      </div>                  
+    </div>
+  </div>
+
+    <h2 class="format-text">Welcome to HVAC in a Hurry!</h2>
+    <h3 class="format-text">This site is designed to help HinH Technicians find and order the correct part/system.</h3>
+    <br><br>
+    <p class="login-message">Please Register and log-in to use this site.</p>
+    <h3 class="search-link-visible"><a href="search.html">SEARCH for parts/systems</a></h3>
+    <h3 class="format-text"><a href="help.html">Find HELP</a></h3>
+
+<script src="https://code.jquery.com/jquery-2.1.4.js" integrity="sha256-siFczlgw4jULnUICcdm9gjQPZkw/YPDqhQ9+nAOScE4=" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+
+<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+
+<!-- Previously loaded Firebase SDKs -->
+  
+<script>
+// TODO: Replace the following with your app's Firebase project configuration
+// For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
+var firebaseConfig = {
+    apiKey: "AIzaSyCnEP7ZQDe2r2Wb3cdo02iS4XB8XkvsCWw",
+    authDomain: "coding-for-designers-iii---ch.firebaseapp.com",
+    databaseURL: "https://coding-for-designers-iii---ch.firebaseio.com",
+    projectId: "coding-for-designers-iii---ch",
+    storageBucket: "coding-for-designers-iii---ch.appspot.com",
+    messagingSenderId: "83997820312",
+    appId: "1:83997820312:web:3c48e5818032a9f13d17ed",
+    measurementId: "G-KF3W8M4ZQ8"
+    };
+  
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script> 
+
+</body>
+</html>
